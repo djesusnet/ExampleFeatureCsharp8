@@ -8,7 +8,7 @@ namespace ExampleFeatureCsharp8
         static void Main(string[] args)
         {
             #region New feature C#8.0 - Ranges
-    
+
             var cursos = new string[] { ".NET CORE", "C#", "ENTITY FRAMEWORK", "NODE JS", "ANGULAR" };
 
             Console.WriteLine("-------------------------EXEMPLO  RANGES C# 8.0--------------------------");
@@ -68,6 +68,37 @@ namespace ExampleFeatureCsharp8
                 Console.WriteLine($"Trazendo somente a posição quatro do array:: {item}");
             }
             Console.WriteLine("-------------------------------------------------------------------------");
+            Console.WriteLine();
+
+            #endregion
+
+            #region New feature C#8.0 - Switch Expression
+            Console.WriteLine("-------------------------Switch Expression--------------------------");
+            Console.WriteLine("Soma 4 + 2 : " +
+                Calculo.Calcular(TipoCalculo.Soma, 4, 2));
+            Console.WriteLine("Subtrair  4 - 2: " +
+                Calculo.Calcular(TipoCalculo.Subtrair, 4, 2));
+            Console.WriteLine("Multiplicar 4 * 2: " +
+                 Calculo.Calcular(TipoCalculo.Multiplicar, 4, 2));
+            Console.WriteLine("Dividir 4 / 2: " +
+                 Calculo.Calcular(TipoCalculo.Dividir, 4, 2));
+            Console.WriteLine("---------------------------------------------------------------------");
+            Console.WriteLine();
+
+            #endregion
+
+            #region New feature C#8.0 - Switch Tuple Patterns
+
+            Console.WriteLine("-------------------------Switch Tuple Patterns--------------------------");
+            Console.WriteLine("Soma 4 + 2 : " +
+                Calculo.RealizaCalculo(TipoCalculo.Soma, PermiteCalcular.Sim, 4, 2));
+            Console.WriteLine("Subtrair  4 - 2: " +
+                Calculo.RealizaCalculo(TipoCalculo.Soma, PermiteCalcular.Sim, 4, 2));
+            Console.WriteLine("Multiplicar 4 * 2: " +
+                 Calculo.RealizaCalculo(TipoCalculo.Soma, PermiteCalcular.Sim, 4, 2));
+            Console.WriteLine("Dividir 4 / 2: " +
+                 Calculo.RealizaCalculo(TipoCalculo.Soma, PermiteCalcular.Sim, 4, 2));
+            Console.WriteLine("---------------------------------------------------------------------");
             Console.WriteLine();
 
             #endregion
